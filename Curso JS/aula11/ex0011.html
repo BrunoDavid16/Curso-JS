@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual o seu País</title>
+    <style>
+        body {
+            font: normal 12pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você é Brasileiro ou Estrangeiro?</h1>
+    Informe o seu País <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="resultado"></div>
+    <script>
+     function verificar() {
+       var pais = document.getElementById("pais").value// Obtém o valor do input e remove espaços extras
+       var resultado = document.getElementById("resultado");
+       
+       if (pais.toLowerCase() === "brasil") { // Converte o texto para minúsculas para comparar sem erros
+            resultado.innerHTML = 'Você é Brasileiro';
+       } else {
+            resultado.innerHTML = 'Você é Estrangeiro'; // Substitui o conteúdo, evitando duplicações
+       }
+     }
+    </script>
+</body>
+</html>
